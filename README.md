@@ -32,9 +32,8 @@ You're going to need:
 
 ### Getting Set Up
 
- 1. Fork this repository on Github.
- 2. Clone *your forked repository* (not our original one) to your hard drive with `git clone https://github.com/YOURUSERNAME/slate.git`
- 3. `cd slate`
+ 1. Clone this repository to your hard drive
+ 3. `cd web-api-docs`
  4. Install all dependencies: `bundle install`
  5. Start the test server: `bundle exec middleman server`
 
