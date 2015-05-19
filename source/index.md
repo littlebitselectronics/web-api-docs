@@ -130,7 +130,7 @@ The :id can be obtained from the authentication response
 
 # Projects
 
-## Get all projects
+## Get all published projects
 
 ```shell
 curl "http://{server}/api/v2/projects?per_page=1"
@@ -184,8 +184,6 @@ curl "http://{server}/api/v2/projects?per_page=1"
 
 Parameter | Type  | Description
 --------- | ----- | -----------
-slug | string | Return only the project with this specific slug
-user | integer | Return all projects of a given user
 page | integer | Page number of returned results. Default is 1
 per_page | integer | Number of results per page. Default is 10
 
@@ -205,14 +203,15 @@ curl "http://{server}/api/v2/projects/search?q=pig?per_page=1"
 
 Parameter | Type  | Description
 --------- | ----- | -----------
-bits | integer | Return projects with this product ID. Can be a comma separated list.
-tag | string | Return all projects with a given tag
 q | string | Search projects by keyword
+tag | string | Return projects with a given tag
+bits | integer | Return projects with this product ID. Can be a comma separated list.
+user | integer | Return projects of a given user ID
 page | integer | Page number of returned results. Default is 1
 per_page | integer | Number of results per page. Default is 10
 
 
-## Get a specific project
+## Get a project
 
 ```shell
 curl "http://{server}/api/v2/projects/2055"
@@ -268,7 +267,16 @@ curl "http://{server}/api/v2/projects/2055"
     "criteria": {
         "method": "GET",
         "endpoint": "/api/v1/projects/2055",
-        "params": null
+        "params": [
+          {
+            "name": "id",
+            "value": 2055
+          },
+          {
+            "name": "slug",
+            "value": null
+          }
+        ]
       },
       "success": true,
       "errors": null
@@ -277,4 +285,10 @@ curl "http://{server}/api/v2/projects/2055"
 
 ```
 
-`GET http://{server}/api/v2/projects/{:id}`
+`GET http://{server}/api/v2/projects/{:id|:slug}`
+
+### Examples
+
+`GET http://{server}/api/v2/projects/16`
+
+`GET http://{server}/api/v2/projects/robot`
