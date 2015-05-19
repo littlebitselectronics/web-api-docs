@@ -11,6 +11,14 @@ Slate helps you create beautiful API documentation. Think of it as an intelligen
 
 *The example above was created with Slate. Check it out at [tripit.github.io/slate](http://tripit.github.io/slate).*
 
+Slate Workflow
+--------------
+
+1. Make changes on `master` mainly to `source/index.md` or `includes/`
+2. Commit and push yo' codez
+3. Make sure you have checked out gh-pages branch
+4. On `master` run `rake publish`
+
 Getting Started with Slate
 ------------------------------
 
