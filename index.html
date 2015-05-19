@@ -169,7 +169,7 @@ The :id can be obtained from the authentication response
 
 <h1 id="projects">Projects</h1>
 
-<h2 id="get-all-projects">Get all projects</h2>
+<h2 id="get-all-published-projects">Get all published projects</h2>
 <pre class="highlight shell"><code>curl <span class="s2">"http://{server}/api/v2/projects?per_page=1"</span>
 </code></pre>
 
@@ -227,16 +227,6 @@ The :id can be obtained from the authentication response
 </tr>
 </thead><tbody>
 <tr>
-<td>slug</td>
-<td>string</td>
-<td>Return only the project with this specific slug</td>
-</tr>
-<tr>
-<td>user</td>
-<td>integer</td>
-<td>Return all projects of a given user</td>
-</tr>
-<tr>
 <td>page</td>
 <td>integer</td>
 <td>Page number of returned results. Default is 1</td>
@@ -268,19 +258,24 @@ The :id can be obtained from the authentication response
 </tr>
 </thead><tbody>
 <tr>
+<td>q</td>
+<td>string</td>
+<td>Search projects by keyword</td>
+</tr>
+<tr>
+<td>tag</td>
+<td>string</td>
+<td>Return projects with a given tag</td>
+</tr>
+<tr>
 <td>bits</td>
 <td>integer</td>
 <td>Return projects with this product ID. Can be a comma separated list.</td>
 </tr>
 <tr>
-<td>tag</td>
-<td>string</td>
-<td>Return all projects with a given tag</td>
-</tr>
-<tr>
-<td>q</td>
-<td>string</td>
-<td>Search projects by keyword</td>
+<td>user</td>
+<td>integer</td>
+<td>Return projects of a given user ID</td>
 </tr>
 <tr>
 <td>page</td>
@@ -294,7 +289,7 @@ The :id can be obtained from the authentication response
 </tr>
 </tbody></table>
 
-<h2 id="get-a-specific-project">Get a specific project</h2>
+<h2 id="get-a-project">Get a project</h2>
 <pre class="highlight shell"><code>curl <span class="s2">"http://{server}/api/v2/projects/2055"</span>
 </code></pre>
 
@@ -348,7 +343,16 @@ The :id can be obtained from the authentication response
     </span><span class="s2">"criteria"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/api/v1/projects/2055"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"params"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+        </span><span class="s2">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"id"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">2055</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"slug"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
       </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
@@ -357,7 +361,13 @@ The :id can be obtained from the authentication response
 
 </span></code></pre>
 
-<p><code class="prettyprint">GET http://{server}/api/v2/projects/{:id}</code></p>
+<p><code class="prettyprint">GET http://{server}/api/v2/projects/{:id|:slug}</code></p>
+
+<h3 id="examples">Examples</h3>
+
+<p><code class="prettyprint">GET http://{server}/api/v2/projects/16</code></p>
+
+<p><code class="prettyprint">GET http://{server}/api/v2/projects/robot</code></p>
 
           <h1 id="status-codes">Status Codes</h1>
 
