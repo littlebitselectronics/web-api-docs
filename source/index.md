@@ -11,6 +11,7 @@ includes:
   - auth
   - my_library
   - projects
+  - users
   - status_codes
 
 search: true
