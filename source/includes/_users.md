@@ -14,9 +14,6 @@ curl "http://{server}/api/v2/users/7"
     {
       "id": 7,
       "username": "erin_littleBits",
-      "first_name": "erin",
-      "last_name": "mulcahy",
-      "email": "erin@littlebits.cc",
       "twitter": "",
       "location": "boston, ma",
       "bio": "All the things!",
