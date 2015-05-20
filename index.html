@@ -43,7 +43,8 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id="introduction">Introduction</h1>
+        
+          <h1 id="introduction">Introduction</h1>
 
 <p>Welcome to the littleBits Mobile Application API reference docs. The littleBits.cc website itself has two existing API architecture&rsquo;s:</p>
 
@@ -51,6 +52,54 @@
 <li>One used and exposed primarily through the SpreeCommerce OpenSource framework</li>
 <li>another primarily used and exposed for littleBits CloudControl.</li>
 </ul>
+
+<h2 id="api-responses">API Responses</h2>
+
+<blockquote>
+<p>Standard Response format</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{what you asked for here}"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"criteria"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{method used}"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/api/v2/{endpoint}"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{param}"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{value}"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{error message if success false}"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h3 id="lb-api-response-format">LB API Response Format</h3>
+
+<p>Every response will be an object with two keys, results and meta. Results will be an object or array of objects depending on the end point. Or empty if there was an error. Meta describes the request you made.</p>
+
+<ul>
+<li><code class="prettyprint">version</code> - Number, What API version you are using.</li>
+<li><code class="prettyprint">criteria</code> - Object, How we processed your request.
+
+<ul>
+<li><code class="prettyprint">method</code> - String, What HTTP method was used.</li>
+<li><code class="prettyprint">endpoint</code> - String, What endpoint you hit.</li>
+<li><code class="prettyprint">params</code> - Array of Objects, An array of key-value objects that represent what the values for your params were, including optional ones you might not have specified.</li>
+</ul></li>
+<li><code class="prettyprint">success</code> - Boolean, if the request was successfully processed.</li>
+<li><code class="prettyprint">errors</code> - String, the error message associated with a false success value.</li>
+</ul>
+
+<h3 id="documentation-format">Documentation Format</h3>
+
+<p>For the sample json responses, we will be providing the value of <code class="prettyprint">results</code>. The actual calls will include both meta and result but the meta format is standard across all endpoints.</p>
 
           <h1 id="authentication">Authentication</h1>
 
@@ -268,6 +317,73 @@ You must replace `meowmeowmeow` with the users mobile_auth_token.
 <td>Body of the comment.</td>
 </tr>
 </tbody></table>
+
+          <h1 id="content">Content</h1>
+
+<h2 id="get-content">Get Content</h2>
+
+<blockquote>
+<p>To request CMS content, use this code:</p>
+</blockquote>
+<pre class="highlight shell"><code>curl -X GET https://<span class="o">{</span>server_name<span class="o">}</span>/api/v2/content?key<span class="o">=</span><span class="s2">"{your_content_key_here}"</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured. We currently support two types of display responses: list and html.</p>
+
+<h3 id="list">List</h3>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"power"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"It All Begins With Power"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"It's kind of important"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://lb-community.s3.amazonaws.com/uploads/image/asset/9531/card_feature_IMG_4778_-_Copy.JPG"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"light"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"All Of The Lights"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"All of them!"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://lb-community.s3.amazonaws.com/uploads/image/asset/5953/large_filled_Sweater_IMG_7021LR.jpg"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<blockquote>
+<h3 id="html">HTML</h3>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"html"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;div class=\"container section-divider\"&gt;\ &lt;h2 class=\"title-md section-title\"&gt;How it &lt;strong class=\"purple\"&gt;Works&lt;/strong&gt;&lt;/h2&gt;\ &lt;div class=\"row\"&gt;\ &lt;div class=\"col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3\"&gt;\ &lt;p class=\"section-sub-title\"&gt;The library has over 60 modules and growing. Every module works with every other in millions of combinations, you will never run out of things to make. Thousands of people are already inventing with littleBits. Join us!&lt;/p&gt;\ &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<h3 id="getting-cms-content">Getting CMS Content</h3>
+
+<p>In order to retieve content from our server you will need a key. Keys are dot separated strings that allow for the creation of content that is simulateously structured and namespaced. An example is:</p>
+
+<p><code class="prettyprint">content.landingpages.podcasts.android</code></p>
+
+<p><code class="prettyprint">.android</code> represents an instance of podcasts, while the key <code class="prettyprint">.podcasts</code> respresents all of the podcast instances. </p>
+
+<h3 id="responses">Responses</h3>
+
+<p>Every response object will have two keys: display and content. Currently, we support two types of display types: html and list. List is an array of json objects that respresent the items you requested. HTML is a block of HTML to display.</p>
+
+<h3 id="current-keys">Current Keys</h3>
+
+<p>Currently we only have to live keys as samples <code class="prettyprint">learn.lbbasics</code> will return you a list of lbbasics objects. <code class="prettyprint">learn.play</code> will return a blob of html to be rendered.</p>
 
           <h1 id="my-library">My Library</h1>
 
