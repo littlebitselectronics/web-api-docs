@@ -9,6 +9,7 @@ toc_footers:
 
 includes:
   - auth
+  - comments
   - content
   - my_library
   - projects
