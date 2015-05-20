@@ -1,5 +1,7 @@
 # Content
 
+## Get Content
+
 > To request CMS content, use this code:
 
 ```shell
