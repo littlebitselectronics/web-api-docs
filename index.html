@@ -173,151 +173,6 @@ curl <span class="s2">"api_endpoint_here"</span>
 You must replace `meowmeowmeow` with the users mobile_auth_token.
 </aside>
 
-          <h1 id="comments">Comments</h1>
-
-<h2 id="get-comments">Get comments</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"http://{server}/api/v2/comments/projects/774"</span>
-</code></pre>
-
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="mi">2996</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"owner_id"</span><span class="p">:</span><span class="mi">15157</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"body"</span><span class="p">:</span><span class="s2">"AWESOME!!!!  :)"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="s2">"2015-04-06T12:48:36.000Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"replies"</span><span class="p">:[]</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="s2">"meta"</span><span class="p">:{</span><span class="w">
-    </span><span class="s2">"version"</span><span class="p">:</span><span class="mf">2.0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"criteria"</span><span class="p">:</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"method"</span><span class="p">:</span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"endpoint"</span><span class="p">:</span><span class="s2">"/api/v2/comments/project/the-pune-rudefood"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"page"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"value"</span><span class="p">:</span><span class="mi">1</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"per_page"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"value"</span><span class="p">:</span><span class="mi">10</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"id"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"value"</span><span class="p">:</span><span class="kc">null</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"slug"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"value"</span><span class="p">:</span><span class="s2">"the-pune-rudefood"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"type"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"value"</span><span class="p">:</span><span class="s2">"project"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">]</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"success"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"errors"</span><span class="p">:</span><span class="kc">null</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<p><code class="prettyprint">GET http://{server}/api/v2/comments/{:type}/{:id|:slug}</code></p>
-
-<h3 id="examples">Examples</h3>
-
-<p><code class="prettyprint">GET http://{server}/api/v2/comments/projects/16</code></p>
-
-<p><code class="prettyprint">GET http://{server}/api/v2/comments/projects/littlepiggy-bank--3</code></p>
-
-<h3 id="query-parameters">Query Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>page</td>
-<td>integer</td>
-<td>Page number of returned results. Default is 1</td>
-</tr>
-<tr>
-<td>per_page</td>
-<td>integer</td>
-<td>Number of results per page. Default is 10</td>
-</tr>
-</tbody></table>
-
-<h2 id="create-comment">Create comment</h2>
-<pre class="highlight shell"><code>curl -X POST -H <span class="s2">"MobileAppAuth: {api_key}"</span> -F <span class="s2">"comment=first!"</span> http://<span class="o">{</span>server<span class="o">}</span>/api/v2/comments/project/16
-</code></pre>
-
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="mi">2996</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"owner_id"</span><span class="p">:</span><span class="mi">15157</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"body"</span><span class="p">:</span><span class="s2">"first!"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="s2">"2015-04-06T12:48:36.000Z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"replies"</span><span class="p">:[]</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="s2">"meta"</span><span class="p">:{</span><span class="w">
-    </span><span class="s2">"version"</span><span class="p">:</span><span class="mf">2.0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"criteria"</span><span class="p">:</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"method"</span><span class="p">:</span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"endpoint"</span><span class="p">:</span><span class="s2">"/api/v2/comments/project/the-pune-rudefood"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"id"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"value"</span><span class="p">:</span><span class="mi">16</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"type"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"value"</span><span class="p">:</span><span class="s2">"project"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"body"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"value"</span><span class="p">:</span><span class="s2">"first!"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">]</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"success"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"errors"</span><span class="p">:</span><span class="kc">null</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<p><code class="prettyprint">POST http://{server}/api/v2/comments/{:type}/{:id|:slug}</code></p>
-
-<p>This request requires authentication.</p>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>comment</td>
-<td>string</td>
-<td>Body of the comment.</td>
-</tr>
-</tbody></table>
-
           <h1 id="content">Content</h1>
 
 <h2 id="get-content">Get Content</h2>
@@ -936,6 +791,193 @@ This will return more than one Library Module that represent the bits contained 
 <p><code class="prettyprint">GET http://{server}/api/v2/projects/16</code></p>
 
 <p><code class="prettyprint">GET http://{server}/api/v2/projects/robot</code></p>
+
+          <h1 id="projects-comments">Projects Comments</h1>
+
+<h2 id="get-comments">Get comments</h2>
+<pre class="highlight shell"><code>curl <span class="s2">"http://{server}/api/v2/projects/774/comments"</span>
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="mi">2996</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"owner_id"</span><span class="p">:</span><span class="mi">15157</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"body"</span><span class="p">:</span><span class="s2">"AWESOME!!!!  :)"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="s2">"2015-04-06T12:48:36.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"replies"</span><span class="p">:[]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"meta"</span><span class="p">:{</span><span class="w">
+    </span><span class="s2">"version"</span><span class="p">:</span><span class="mf">2.0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"criteria"</span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"method"</span><span class="p">:</span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"endpoint"</span><span class="p">:</span><span class="s2">"/api/v2/comments/project/the-pune-rudefood"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"page"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"value"</span><span class="p">:</span><span class="mi">1</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"per_page"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"value"</span><span class="p">:</span><span class="mi">10</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"id"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"value"</span><span class="p">:</span><span class="kc">null</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"slug"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"value"</span><span class="p">:</span><span class="s2">"the-pune-rudefood"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"type"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"value"</span><span class="p">:</span><span class="s2">"project"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"success"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"errors"</span><span class="p">:</span><span class="kc">null</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p><code class="prettyprint">GET http://{server}/api/v2/projects/{:project_id}/comments</code></p>
+
+<h3 id="examples">Examples</h3>
+
+<p><code class="prettyprint">GET http://{server}/api/v2/projects/16/comments</code></p>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>page</td>
+<td>integer</td>
+<td>Page number of returned results. Default is 1</td>
+</tr>
+<tr>
+<td>per_page</td>
+<td>integer</td>
+<td>Number of results per page. Default is 10</td>
+</tr>
+</tbody></table>
+
+<h2 id="create-comment">Create comment</h2>
+<pre class="highlight shell"><code>curl -X POST -H <span class="s2">"MobileAppAuth: {api_key}"</span> -F <span class="s2">"comment=first!"</span> http://<span class="o">{</span>server<span class="o">}</span>/api/v2/projects/16/comments
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="mi">2996</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"owner_id"</span><span class="p">:</span><span class="mi">15157</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"body"</span><span class="p">:</span><span class="s2">"first!"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created_at"</span><span class="p">:</span><span class="s2">"2015-04-06T12:48:36.000Z"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"replies"</span><span class="p">:[]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"meta"</span><span class="p">:{</span><span class="w">
+    </span><span class="s2">"version"</span><span class="p">:</span><span class="mf">2.0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"criteria"</span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"method"</span><span class="p">:</span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"endpoint"</span><span class="p">:</span><span class="s2">"/api/v2/comments/project/the-pune-rudefood"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"id"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"value"</span><span class="p">:</span><span class="mi">16</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"type"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"value"</span><span class="p">:</span><span class="s2">"project"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"body"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"value"</span><span class="p">:</span><span class="s2">"first!"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"success"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"errors"</span><span class="p">:</span><span class="kc">null</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p><code class="prettyprint">POST http://{server}/api/v2/projects/{:project_id}/comments</code></p>
+
+<h3 id="reply">Reply</h3>
+
+<p><code class="prettyprint">POST http://{server}/api/v2/projects/{:project_id}/comments/{:comment_id}</code></p>
+
+<p>This request requires authentication.</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>comment</td>
+<td>string</td>
+<td>Body of the comment.</td>
+</tr>
+</tbody></table>
+
+          <h1 id="projects-likes">Projects Likes</h1>
+
+<h2 id="(un)like-a-project">(un)Like a Project</h2>
+<pre class="highlight shell"><code>curl -X POST -H <span class="s2">"MobileAppAuth: {api_key}"</span> http://<span class="o">{</span>server<span class="o">}</span>/api/v2/projects/16/like
+</code></pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"like_count"</span><span class="p">:</span><span class="mi">6</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"meta"</span><span class="p">:{</span><span class="w">
+    </span><span class="s2">"version"</span><span class="p">:</span><span class="mf">2.0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"criteria"</span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"method"</span><span class="p">:</span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"endpoint"</span><span class="p">:</span><span class="s2">"/api/v2/comments/project/16/like"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"id"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"value"</span><span class="p">:</span><span class="mi">16</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"type"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"value"</span><span class="p">:</span><span class="s2">"project"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"success"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"errors"</span><span class="p">:</span><span class="kc">null</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p><code class="prettyprint">POST http://{server}/api/v2/projects/{:project_id}/like</code></p>
+
+<p>This request requires authentication.</p>
 
           <h1 id="users">Users</h1>
 
