@@ -10,10 +10,11 @@ toc_footers:
 includes:
   - intro
   - auth
-  - comments
   - content
   - my_library
   - projects
+  - comments
+  - likes
   - users
   - status_codes
 

@@ -1,9 +1,9 @@
-# Comments
+# Projects Comments
 
 ## Get comments
 
 ```shell
-curl "http://{server}/api/v2/comments/projects/774"
+curl "http://{server}/api/v2/projects/774/comments"
 ```
 
 > The above command returns JSON structured like this:
@@ -54,13 +54,11 @@ curl "http://{server}/api/v2/comments/projects/774"
 }
 ```
 
-`GET http://{server}/api/v2/comments/{:type}/{:id|:slug}`
+`GET http://{server}/api/v2/projects/{:project_id}/comments`
 
 ### Examples
 
-`GET http://{server}/api/v2/comments/projects/16`
-
-`GET http://{server}/api/v2/comments/projects/littlepiggy-bank--3`
+`GET http://{server}/api/v2/projects/16/comments`
 
 ### Query Parameters
 
@@ -72,7 +70,7 @@ per_page | integer | Number of results per page. Default is 10
 ## Create comment
 
 ```shell
-curl -X POST -H "MobileAppAuth: {api_key}" -F "comment=first!" http://{server}/api/v2/comments/project/16
+curl -X POST -H "MobileAppAuth: {api_key}" -F "comment=first!" http://{server}/api/v2/projects/16/comments
 ```
 
 > The above command returns JSON structured like this:
@@ -115,7 +113,11 @@ curl -X POST -H "MobileAppAuth: {api_key}" -F "comment=first!" http://{server}/a
 }
 ```
 
-`POST http://{server}/api/v2/comments/{:type}/{:id|:slug}`
+`POST http://{server}/api/v2/projects/{:project_id}/comments`
+
+### Reply
+
+`POST http://{server}/api/v2/projects/{:project_id}/comments/{:comment_id}`
 
 This request requires authentication.
 
