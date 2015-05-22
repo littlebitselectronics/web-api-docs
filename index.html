@@ -416,7 +416,7 @@ You must replace `meowmeowmeow` with the users mobile_auth_token.
 
 <h2 id="update-existing-module">UPDATE existing module</h2>
 
-<p><strong>NOTE</strong>: The following example is for adding 1 to a kit Library Module (with variant_id=201) that already exists with a quantity of 1 in the user&rsquo;s library.
+<p><strong>NOTE</strong>: The following example is for incrementing the quantity of a kit Library Module (with variant_id=201) that already exists with a quantity of 1 in the user&rsquo;s library.
 This will return more than one Library Module that represent the bits contained within the kit.</p>
 <pre class="highlight shell"><code> curl -X PUT -d <span class="nv">variant_id</span><span class="o">=</span>201 -d <span class="nv">operator</span><span class="o">=</span><span class="s2">"add"</span> -d <span class="nv">delta</span><span class="o">=</span>1 http://&lt;SERVER&gt;/api/v2/my_library --user &lt;HTTPUSER&gt;:&lt;HTTPPASSWORD&gt; -H <span class="s2">"MobileAppAuth: &lt;USER_API_KEY&gt;"</span>
 </code></pre>
