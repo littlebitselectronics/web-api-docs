@@ -1,6 +1,6 @@
 # Projects Likes
 
-## (un)Like a Project
+## Like a Project
 
 ```shell
 curl -X POST -H "MobileAppAuth: {api_key}" http://{server}/api/v2/projects/16/like
