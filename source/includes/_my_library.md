@@ -64,7 +64,7 @@ curl http://<SERVER>/api/v2/my_library --user <HTTPUSER>:<HTTPPASSWORD> -H "Mobi
 }
 ```
 
-This endpoint creates a new Library Module
+This endpoint shows all modules in a user's library
 
 ### HTTP Request
 
