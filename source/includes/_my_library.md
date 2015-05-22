@@ -168,7 +168,7 @@ variant_id | integer | The ID of the product variant you are adding the user's l
 
 ## UPDATE existing module
 
-**NOTE**: The following example is for adding 1 to a kit Library Module (with variant_id=201) that already exists with a quantity of 1 in the user's library.
+**NOTE**: The following example is for incrementing the quantity of a kit Library Module (with variant_id=201) that already exists with a quantity of 1 in the user's library.
 This will return more than one Library Module that represent the bits contained within the kit.
 
 ```shell
