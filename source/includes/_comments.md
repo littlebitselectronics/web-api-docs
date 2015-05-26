@@ -1,6 +1,6 @@
 # Comments
 
-## Get comments
+## GET comments
 
 ```shell
 curl "http://{server}/api/v2/comments/projects/774"
@@ -69,7 +69,7 @@ Parameter | Type  | Description
 page | integer | Page number of returned results. Default is 1
 per_page | integer | Number of results per page. Default is 10
 
-## Create comment
+## CREATE comment
 
 ```shell
 curl -X POST -H "MobileAppAuth: {api_key}" -F "comment=first!" http://{server}/api/v2/comments/project/16

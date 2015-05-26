@@ -1,6 +1,6 @@
 # Content
 
-## Get Content
+## GET Content
 
 > To request CMS content, use this code:
 
