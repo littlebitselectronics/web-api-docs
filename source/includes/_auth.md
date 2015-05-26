@@ -4,17 +4,17 @@
 
 ```shell
 curl --data "mobile_app[email]=you@example.com&mobile_app[password]=savekittens"
-https://{server_name}/api/mobile_app_sessions
+https://{server_name}/api/v2/session/create
 ```
 > The above command returns JSON structured like this:
 
 ```json
   {
     "id": 54786,
+    "username": "someperson001",
     "first_name": null,
     "last_name": null,
     "avatar": "https://lb-community-staging.s3.amazonaws.com/uploads/user/avatar/blueModule.png",
-    "username": "someperson001",
     "mobile_auth_token": "aaaaaaaaaaaaaaaaaaaaaaaaa"
   }
 ```
@@ -41,7 +41,7 @@ or
 
 ### HTTP Request
 
-`POST http://{server}/api/mobile_app_sessions`
+`POST http://{server}/api/v2/session/create`
 
 ### Form Data
 
