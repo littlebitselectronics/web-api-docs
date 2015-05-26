@@ -46,5 +46,3 @@ Every response will be an object with two keys, results and meta. Results will b
 
 ### Documentation Format
 
-For the sample json responses, we will be providing the value of `results`. The actual calls will include both meta and result but the meta format is standard across all endpoints.
-
