@@ -7,7 +7,7 @@
 ```shell
 curl -X GET https://{server_name}/api/v2/content?key="{your_content_key_here}"
 ```
-> The above command returns JSON structured. We currently support two types of display responses: list and html.
+> The above command returns JSON. We currently support two types of display responses: list and html.
 
 > ### List
 

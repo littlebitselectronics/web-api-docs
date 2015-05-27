@@ -7,7 +7,7 @@
 ```shell
 curl -X GET https://{server_name}/api/v2/app_update"
 ```
-> The above command returns JSON structured.
+> The above command returns JSON.
 
 > ### Example
 

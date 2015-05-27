@@ -13,6 +13,7 @@ includes:
   - auth
   - content
   - my_library
+  - products
   - projects
   - comments
   - likes
