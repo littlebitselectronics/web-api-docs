@@ -96,7 +96,7 @@ This endpoint shows all modules in a user's library
         },
         {
             "variant_id": 179,
-            "description": "This power adapter and USB cable combo is the perfect way to  power permanent creations! Simply connect the cable from the wall adapter to your,
+            "description": "This power adapter and USB cable combo is the perfect way to  power permanent creations! Simply connect the cable from the wall adapter to your",
             "title": "USB Power Adapter + Cable",
             "image": "https://s3.amazonaws.com/lb-spree-staging/spree/products/2250/large/WallAdapter_1LR.jpg?1423168338",
             "quantity": 1,
@@ -195,7 +195,7 @@ This will return more than one Library Module that represent the bits contained 
         },
         {
             "variant_id": 179,
-            "description": "This power adapter and USB cable combo is the perfect way to  power permanent creations! Simply connect the cable from the wall adapter to your,
+            "description": "This power adapter and USB cable combo is the perfect way to  power permanent creations! Simply connect the cable from the wall adapter to your",
             "title": "USB Power Adapter + Cable",
             "image": "https://s3.amazonaws.com/lb-spree-staging/spree/products/2250/large/WallAdapter_1LR.jpg?1423168338",
             "quantity": 2,
