@@ -15,7 +15,7 @@ curl -X GET https://{server_name}/api/v2/app_update"
 {
 	"results": {
 		"version": 1,
-		"viewforia": 1,
+		"vuforia": 1,
 		"css": 1,
 		"appData": {
 			"projects": [
