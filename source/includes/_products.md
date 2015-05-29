@@ -16,6 +16,8 @@ curl -X GET https://{server_name}/api/v2/products/{:id}"
 	"results": {
 		"id": 4,
 		"name": "slide dimmer",
+    "type": "Bit",
+    "bit_type": "input",
 		"description": "You control the slide dimmer Bit by moving its lever from one end of the Bit to the other. It functions just like a light dimmer you might find at home, or a volume fader in a recording studio. Follow it with an LED for some adjustable mood lighting.\ \ \ \ Check out our <b> <a href=\"http://littlebits.cc/fridays-tips-tricks-the-slide-dimmer-and-dimmer-bits\" target=\"_blank\">Tips + Tricks</a></b> for more ideas on using the slide dimmer.",
 		"slug": "slide-dimmer",
 		"available_on": "2012-12-16T00:00:00.000Z",
@@ -26,6 +28,8 @@ curl -X GET https://{server_name}/api/v2/products/{:id}"
 		"variants": [
 			{
 				"id": 4,
+        "type": "Bit",
+        "bit_type": "input"
 				"is_master": true,
 				"images": [
 					{
@@ -79,6 +83,8 @@ curl -X GET https://{server_name}/api/v2/products/{:product_id}/variants/{:id}"
 {
 	"results": {
 		"id": 4,
+    "type": "Bit",
+    "bit_type": "input",
 		"is_master": true,
 		"images": [
 			{
