@@ -45,7 +45,7 @@ curl http://<SERVER>/api/v2/my_library --user <HTTPUSER>:<HTTPPASSWORD> -H "Mobi
       "product_id": 166,
       "quantity": 5,
       "title": "USB Power Adapter + Cable",
-      "description": "This power adapter and USB cable combo is the perfect way to  power permanent creations! Simply connect the cable from the wall adapter to your <a href",
+      "description": "This power adapter and USB cable combo is the perfect way to  power permanent creations! Simply connect the cable from the wall adapter to your",
       "type": "Accessory",
       "bit_type": null,
       "images": [
@@ -117,7 +117,7 @@ This endpoint shows all modules in a user's library
       "product_id": 166,
       "quantity": 4,
       "title": "USB Power Adapter + Cable",
-      "description": "This power adapter and USB cable combo is the perfect way to  power permanent creations! Simply connect the cable from the wall adapter to your <a href",
+      "description": "This power adapter and USB cable combo is the perfect way to  power permanent creations! Simply connect the cable from the wall adapter  <a href",
       "type": "Accessory",
       "bit_type": null,
       "images": [
@@ -219,7 +219,7 @@ This will return more than one Library Module that represent the bits contained 
       "product_id": 166,
       "quantity": 5,
       "title": "USB Power Adapter + Cable",
-      "description": "This power adapter and USB cable combo is the perfect way to  power permanent creations! Simply connect the cable from the wall adapter to your <a href",
+      "description": "This power adapter and USB cable combo is the perfect way to  power permanent creations! Simply connect the cable from the wall adapter to your",
       "type": "Accessory",
       "bit_type": null,
       "images": [
@@ -315,7 +315,7 @@ delta | integer | The quantity that you wish to add or subtract (must be positiv
       "product_id": 166,
       "quantity": 2,
       "title": "USB Power Adapter + Cable",
-      "description": "This power adapter and USB cable combo is the perfect way to  power permanent creations! Simply connect the cable from the wall adapter to your <a href",
+      "description": "This power adapter and USB cable combo is the perfect way to  power permanent creations! Simply connect the cable from the wall adapter to your",
       "type": "Accessory",
       "bit_type": null,
       "images": [
