@@ -91,48 +91,47 @@ curl "http://{server}/api/v2/projects/2055"
 
 ```json
 {
-  "results": [
-    {
-      "id": 2055,
-      "name": "Sounding Box #11",
-      "description": "Sounding Box #11 is the first piece to go public in a series of acoustic sculptures that allow viewers...",
-      "user": {
-        "id": 47312,
-        "image": "https://lb-community-staging.s3.amazonaws.com/uploads/user/avatar/small_Caselden_Studios_high_res.png",
-        "slug": "caselden_studios",
-        "username": "Caselden_Studios"
-      },
-      "credits": "God",
-      "like_count": 10,
-      "comment_count": 1,
-      "images": [
-        "https://lb-community-staging.s3.amazonaws.com/uploads/image/asset/7755/large_filled_IMG_6771.jpg"
-      ],
-      "tools": [
-        "3D Printers"
-      ],
-      "products": [
-        {
-          "id": 139,
-          "image": "https://s3.amazonaws.com/lb-spree-staging/spree/products/2046/small/arduino_withlogo.jpg?1423167635",
-          "name": "Arduino",
-          "quantity": 2
-        }
-      ],
-      "materials": [
-        {
-          "name": "Assorted Paints and Finishing Oils",
-          "quantity": 1
-        }
-      ],
-      "steps": [
-        {
-          "number": 1,
-          "description": "<b>Make a sound box:</b><br>Design a resonating wooden chamber. We took design influence from..."
-        }
-      ]
-    }
-  ],
+  "results": 
+  {
+    "id": 2055,
+    "name": "Sounding Box #11",
+    "description": "Sounding Box #11 is the first piece to go public in a series of acoustic sculptures that allow viewers...",
+    "user": {
+      "id": 47312,
+      "image": "https://lb-community-staging.s3.amazonaws.com/uploads/user/avatar/small_Caselden_Studios_high_res.png",
+      "slug": "caselden_studios",
+      "username": "Caselden_Studios"
+    },
+    "credits": "God",
+    "like_count": 10,
+    "comment_count": 1,
+    "images": [
+      "https://lb-community-staging.s3.amazonaws.com/uploads/image/asset/7755/large_filled_IMG_6771.jpg"
+    ],
+    "tools": [
+      "3D Printers"
+    ],
+    "products": [
+      {
+        "id": 139,
+        "image": "https://s3.amazonaws.com/lb-spree-staging/spree/products/2046/small/arduino_withlogo.jpg?1423167635",
+        "name": "Arduino",
+        "quantity": 2
+      }
+    ],
+    "materials": [
+      {
+        "name": "Assorted Paints and Finishing Oils",
+        "quantity": 1
+      }
+    ],
+    "steps": [
+      {
+        "number": 1,
+        "description": "<b>Make a sound box:</b><br>Design a resonating wooden chamber. We took design influence from..."
+      }
+    ]
+  },
   "meta": {
     "criteria": {
         "method": "GET",
