@@ -18,6 +18,7 @@ curl "http://{server}/api/v2/users/7"
       "location": "boston, ma",
       "bio": "All the things!",
       "image": "https://lb-community-staging.s3.amazonaws.com/uploads/user/avatar/484/medium_DSC_4144_-_Version_2.JPG",
+      "member_since": "Member since February 2015",
       "projects": [
         {
           "id": 176,
