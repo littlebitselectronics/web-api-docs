@@ -74,6 +74,7 @@ curl "http://{server}/api/v2/projects/search?q=pig?per_page=1"
 Parameter | Type  | Description
 --------- | ----- | -----------
 q | string | Search projects by keyword
+sort | string | Sort projects by most recent or popular. Accepts either 'recent' or 'popular'
 tag | string | Return projects with a given tag
 bits | integer | Return projects with this product ID. Can be a comma separated list.
 user | integer | Return projects of a given user ID
