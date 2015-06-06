@@ -76,7 +76,8 @@ Parameter | Type  | Description
 q | string | Search projects by keyword
 sort | string | Sort projects by most recent or popular. Accepts either `recent` or `popular`
 tag | string | Return projects with a given tag
-bits | integer | Return projects with this product ID. Can be a comma separated list.
+bits | integer | Return projects with this variant ID. Can be a comma separated list.
+qty | integer | Return projects with this quantity of a corresponding variant ID. Can be a comma separated list of the same size as the list of bits. `*` is a valid quantity.
 user | integer | Return projects of a given user ID
 page | integer | Page number of returned results. Default is 1
 per_page | integer | Number of results per page. Default is 10
