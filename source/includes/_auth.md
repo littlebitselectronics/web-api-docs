@@ -1,5 +1,7 @@
 # Authentication
 
+## Login
+
 > To request a user's authorization token, use this code:
 
 ```shell
@@ -10,12 +12,32 @@ https://{server_name}/api/v2/session/create
 
 ```json
   {
-    "id": 54786,
-    "username": "someperson001",
-    "first_name": null,
-    "last_name": null,
-    "avatar": "https://lb-community-staging.s3.amazonaws.com/uploads/user/avatar/blueModule.png",
-    "mobile_auth_token": "aaaaaaaaaaaaaaaaaaaaaaaaa"
+    "results":{
+      "id":64651,
+      "username":"lev12",
+      "twitter":null,
+      "location":null,
+      "bio":null,
+      "image":"https://lb-community-staging.s3.amazonaws.com/uploads/user/avatar/medium_pinkModule.png",
+      "member_since":"Member since June 2015",
+      "spree_api_key":"2220a36ffe4cae3925a35697623209188fb9748cb3dbae9c",
+      "projects":[]
+    },
+    "meta":{
+      "version":2.0,
+      "criteria":{
+        "method":"POST",
+        "endpoint":"/api/v2/session/create",
+        "params":[
+          {
+            "name":"email",
+            "value":"lev12@ta.tz"
+          }
+        ]
+      },
+      "success":true,
+      "errors":null
+    }
   }
 ```
 
@@ -60,3 +82,21 @@ The API expects mobile authentication token to be included in subseqeunt API req
 <aside class="notice">
 You must replace `meowmeowmeow` with the users mobile_auth_token.
 </aside>
+
+## Log out
+
+```shell
+curl --data "token=savekittens"
+https://{server_name}/api/v2/session/destroy
+```
+> The above command always returns 204 no content status
+
+### HTTP Request
+
+`POST http://{server}/api/v2/session/destroy`
+
+### Form Data
+
+Parameter | Description
+--------- | -----------
+token | `mobile_auth_token`
