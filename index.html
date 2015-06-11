@@ -973,8 +973,9 @@ This will return more than one Library Module that represent the bits contained 
         </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"littlepiggy-bank--3"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://lb-community-staging.s3.amazonaws.com/uploads/image/asset/776/small_pig3_interaction2_highRes.jpg"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Interactive piggy bank that RINGS frantically to thank you for feeding it, BUZZES and LIGHTS up when you pet it’s ear, and SITS quietly when you want it to!&lt;br&gt;"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"like_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
         </span><span class="s2">"comment_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"like_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"liked_by_user"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
         </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
           </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1750</span><span class="p">,</span><span class="w">
           </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://lb-community-staging.s3.amazonaws.com/uploads/user/avatar/17/small_icon-green-ohhh.png"</span><span class="p">,</span><span class="w">
@@ -1006,6 +1007,8 @@ This will return more than one Library Module that represent the bits contained 
 
 <p><code class="prettyprint">GET http://{server}/api/v2/projects/</code></p>
 
+<p>This request requires authentication.</p>
+
 <h3 id="query-parameters">Query Parameters</h3>
 
 <table><thead>
@@ -1036,6 +1039,8 @@ This will return more than one Library Module that represent the bits contained 
 </blockquote>
 
 <p><code class="prettyprint">GET http://{server}/api/v2/projects/search</code></p>
+
+<p>This request requires authentication.</p>
 
 <h3 id="query-parameters">Query Parameters</h3>
 
@@ -1101,6 +1106,9 @@ This will return more than one Library Module that represent the bits contained 
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2055</span><span class="p">,</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sounding Box #11"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sounding Box #11 is the first piece to go public in a series of acoustic sculptures that allow viewers..."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"comment_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"like_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"liked_by_user"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
     </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">47312</span><span class="p">,</span><span class="w">
       </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://lb-community-staging.s3.amazonaws.com/uploads/user/avatar/small_Caselden_Studios_high_res.png"</span><span class="p">,</span><span class="w">
@@ -1108,17 +1116,30 @@ This will return more than one Library Module that represent the bits contained 
       </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Caselden_Studios"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="s2">"credits"</span><span class="p">:</span><span class="w"> </span><span class="s2">"God"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"like_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"comment_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="s2">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="s2">"https://lb-community-staging.s3.amazonaws.com/uploads/image/asset/7755/large_filled_IMG_6771.jpg"</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://lb-community-staging.s3.amazonaws.com/uploads/image/asset/7755/large_filled_IMG_6771.jpg"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
     </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"embeds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"service"</span><span class="p">:</span><span class="w"> </span><span class="s2">"youtube.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;iframe width=\"560\" height=\"315\" src=\"//www.youtube.com/embed/IYJSEPD9T40\" frameborder=\"0\" allowfullscreen&gt;&lt;/iframe&gt;"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
     </span><span class="s2">"tools"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="s2">"3D Printers"</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3D Printers"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
     </span><span class="p">],</span><span class="w">
     </span><span class="s2">"products"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">139</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">139</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"variant_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">133</span><span class="p">,</span><span class="w">
         </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://s3.amazonaws.com/lb-spree-staging/spree/products/2046/small/arduino_withlogo.jpg?1423167635"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arduino"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
@@ -1126,14 +1147,23 @@ This will return more than one Library Module that represent the bits contained 
     </span><span class="p">],</span><span class="w">
     </span><span class="s2">"materials"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
         </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Assorted Paints and Finishing Oils"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">],</span><span class="w">
     </span><span class="s2">"steps"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
         </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;b&gt;Make a sound box:&lt;/b&gt;&lt;br&gt;Design a resonating wooden chamber. We took design influence from..."</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;b&gt;Make a sound box:&lt;/b&gt;&lt;br&gt;Design a resonating wooden chamber. We took design influence from..."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">9896</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://lb-community-staging.s3.amazonaws.com/uploads/image/asset/9896/large_filled_PurpleBit.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"caption"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Picture 1"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
@@ -1160,6 +1190,8 @@ This will return more than one Library Module that represent the bits contained 
 </span></code></pre>
 
 <p><code class="prettyprint">GET http://{server}/api/v2/projects/{:id|:slug}</code></p>
+
+<p>This request requires authentication.</p>
 
 <h3 id="examples">Examples</h3>
 
@@ -1316,7 +1348,7 @@ This will return more than one Library Module that represent the bits contained 
 
           <h1 id="projects-likes">Projects Likes</h1>
 
-<h2 id="like-a-project">Like a Project</h2>
+<h2 id="(un)like-a-project">(un)Like a Project</h2>
 <pre class="highlight shell"><code>curl -X POST -H <span class="s2">"MobileAppAuth: {api_key}"</span> http://<span class="o">{</span>server<span class="o">}</span>/api/v2/projects/16/like
 </code></pre>
 
@@ -1325,7 +1357,8 @@ This will return more than one Library Module that represent the bits contained 
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"like_count"</span><span class="p">:</span><span class="mi">6</span><span class="w">
+    </span><span class="s2">"like_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"liked_by_user"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="s2">"meta"</span><span class="p">:{</span><span class="w">
     </span><span class="s2">"version"</span><span class="p">:</span><span class="mf">2.0</span><span class="p">,</span><span class="w">
@@ -1353,6 +1386,10 @@ This will return more than one Library Module that represent the bits contained 
 <p><code class="prettyprint">POST http://{server}/api/v2/projects/{:project_id}/like</code></p>
 
 <p>This request requires authentication.</p>
+
+<aside class="notice">
+If user has already liked the project, this will unlike it.
+</aside>
 
           <h1 id="users">Users</h1>
 
