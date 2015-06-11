@@ -17,8 +17,9 @@ curl "http://{server}/api/v2/projects?per_page=1"
         "slug": "littlepiggy-bank--3",
         "icon": "https://lb-community-staging.s3.amazonaws.com/uploads/image/asset/776/small_pig3_interaction2_highRes.jpg",
         "description": "Interactive piggy bank that RINGS frantically to thank you for feeding it, BUZZES and LIGHTS up when you pet it’s ear, and SITS quietly when you want it to!<br>",
-        "like_count": 1,
         "comment_count": 0,
+        "like_count": 1,
+        "liked_by_user": true,
         "user": {
           "id": 1750,
           "image": "https://lb-community-staging.s3.amazonaws.com/uploads/user/avatar/17/small_icon-green-ohhh.png",
@@ -98,6 +99,9 @@ curl "http://{server}/api/v2/projects/2055"
     "id": 2055,
     "name": "Sounding Box #11",
     "description": "Sounding Box #11 is the first piece to go public in a series of acoustic sculptures that allow viewers...",
+    "comment_count": 1,
+    "like_count": 10,
+    "liked_by_user": false,
     "user": {
       "id": 47312,
       "image": "https://lb-community-staging.s3.amazonaws.com/uploads/user/avatar/small_Caselden_Studios_high_res.png",
@@ -105,17 +109,30 @@ curl "http://{server}/api/v2/projects/2055"
       "username": "Caselden_Studios"
     },
     "credits": "God",
-    "like_count": 10,
-    "comment_count": 1,
     "images": [
-      "https://lb-community-staging.s3.amazonaws.com/uploads/image/asset/7755/large_filled_IMG_6771.jpg"
+      {
+        "id": 15,
+        "url": "https://lb-community-staging.s3.amazonaws.com/uploads/image/asset/7755/large_filled_IMG_6771.jpg"
+      }
     ],
+    "embeds": [
+      {
+        "id": 5,
+        "service": "youtube.com",
+        "code": "<iframe width=\"560\" height=\"315\" src=\"//www.youtube.com/embed/IYJSEPD9T40\" frameborder=\"0\" allowfullscreen></iframe>"
+      }
+    ],
+    "files": [],
     "tools": [
-      "3D Printers"
+      {
+        "id": 1,
+        "name": "3D Printers"
+      }
     ],
     "products": [
       {
-        "id": 139,
+        "product_id": 139,
+        "variant_id": 133,
         "image": "https://s3.amazonaws.com/lb-spree-staging/spree/products/2046/small/arduino_withlogo.jpg?1423167635",
         "name": "Arduino",
         "quantity": 2
@@ -123,14 +140,23 @@ curl "http://{server}/api/v2/projects/2055"
     ],
     "materials": [
       {
+        "id": 4,
         "name": "Assorted Paints and Finishing Oils",
         "quantity": 1
       }
     ],
     "steps": [
       {
+        "id": 2,
         "number": 1,
-        "description": "<b>Make a sound box:</b><br>Design a resonating wooden chamber. We took design influence from..."
+        "description": "<b>Make a sound box:</b><br>Design a resonating wooden chamber. We took design influence from...",
+        "images": [
+          {
+            "id": 9896,
+            "url": "https://lb-community-staging.s3.amazonaws.com/uploads/image/asset/9896/large_filled_PurpleBit.jpg",
+            "caption": "Picture 1"
+          }
+        ]
       }
     ]
   },
