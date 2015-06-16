@@ -51,7 +51,7 @@ curl "http://{server}/api/v2/projects?per_page=1"
 
 `GET http://{server}/api/v2/projects/`
 
-This request requires authentication.
+This request can be optionally authenticated to receive `liked_by_user`.
 
 ### Query Parameters
 
@@ -72,7 +72,7 @@ curl "http://{server}/api/v2/projects/search?q=pig?per_page=1"
 
 `GET http://{server}/api/v2/projects/search`
 
-This request requires authentication.
+This request can be optionally authenticated to receive `liked_by_user`.
 
 ### Query Parameters
 
@@ -188,7 +188,7 @@ curl "http://{server}/api/v2/projects/2055"
 
 `GET http://{server}/api/v2/projects/{:id|:slug}`
 
-This request requires authentication.
+This request can be optionally authenticated to receive `liked_by_user`.
 
 ### Examples
 
