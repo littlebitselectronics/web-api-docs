@@ -83,6 +83,27 @@ The API expects mobile authentication token to be included in subseqeunt API req
 You must replace `meowmeowmeow` with the users mobile_auth_token.
 </aside>
 
+## Login with Facebook
+
+`POST http://{server}/api/v2/session/fb`
+
+```shell
+curl https://{server_name}/api/v2/session/fb
+```
+
+> Expects the following minimum payload:
+
+```json
+  {
+    "first_name": "Peter",
+    "last_name": "Pan",
+    "email": "e2@ma.il",
+    "access_token": {
+      "userID": "2"
+    }
+  }
+```
+
 ## Log out
 
 ```shell

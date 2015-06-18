@@ -67,3 +67,19 @@ curl "http://{server}/api/v2/users/7"
 `GET http://{server}/api/v2/users/25038`
 
 `GET http://{server}/api/v2/users/lev`
+
+## Create a user
+
+`POST http://{server}/api/v2/users/new`
+
+### Form Data
+
+Parameter | Description
+--------- | -----------
+user[email] | New user's email address
+user[password] | New user's password
+user[password_confirmation] | New user's password
+
+## Password Reset
+
+`GET http://{server}/api/v2/users/password_reset?email=e@ma.il`
