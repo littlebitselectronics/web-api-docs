@@ -289,6 +289,25 @@ curl <span class="s2">"api_endpoint_here"</span>
 You must replace `meowmeowmeow` with the users mobile_auth_token.
 </aside>
 
+<h2 id="login-with-facebook">Login with Facebook</h2>
+
+<p><code class="prettyprint">POST http://{server}/api/v2/session/fb</code></p>
+<pre class="highlight shell"><code>curl https://<span class="o">{</span>server_name<span class="o">}</span>/api/v2/session/fb
+</code></pre>
+
+<blockquote>
+<p>Expects the following minimum payload:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="w">  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Peter"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pan"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"e2@ma.il"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"userID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></code></pre>
+
 <h2 id="log-out">Log out</h2>
 <pre class="highlight shell"><code>curl --data <span class="s2">"token=savekittens"</span>
 https://<span class="o">{</span>server_name<span class="o">}</span>/api/v2/session/destroy
@@ -1458,6 +1477,36 @@ If user has already liked the project, this will unlike it.
 <p><code class="prettyprint">GET http://{server}/api/v2/users/25038</code></p>
 
 <p><code class="prettyprint">GET http://{server}/api/v2/users/lev</code></p>
+
+<h2 id="create-a-user">Create a user</h2>
+
+<p><code class="prettyprint">POST http://{server}/api/v2/users/new</code></p>
+
+<h3 id="form-data">Form Data</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user[email]</td>
+<td>New user&rsquo;s email address</td>
+</tr>
+<tr>
+<td>user[password]</td>
+<td>New user&rsquo;s password</td>
+</tr>
+<tr>
+<td>user[password_confirmation]</td>
+<td>New user&rsquo;s password</td>
+</tr>
+</tbody></table>
+
+<h2 id="password-reset">Password Reset</h2>
+
+<p><code class="prettyprint">GET http://{server}/api/v2/users/password_reset?email=e@ma.il</code></p>
 
           <h1 id="status-codes">Status Codes</h1>
 
