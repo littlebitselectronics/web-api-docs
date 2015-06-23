@@ -77,6 +77,7 @@ curl "http://{server}/api/v2/users/7"
 Parameter | Description
 --------- | -----------
 user[email] | New user's email address
+user[username] | New user's username
 user[password] | New user's password
 user[password_confirmation] | New user's password
 
