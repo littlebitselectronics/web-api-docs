@@ -80,7 +80,7 @@ Parameter | Type  | Description
 --------- | ----- | -----------
 q | string | Search projects by keyword
 sort | string | Sort projects by most recent or popular. Accepts either `recent` or `popular`
-tag | string | Return projects with a given tag
+tags | string | Return projects with a given tag
 variants | integer | Return projects with these variant IDs and not any others. Should be a comma separated list.
 qty | integer | Return projects with this quantity of a corresponding variant ID. Must be a comma separated list of the same size as the list of variants.
 user | integer | Return projects of a given user ID
@@ -98,7 +98,7 @@ curl "http://{server}/api/v2/projects/2055"
 
 ```json
 {
-  "results": 
+  "results":
   {
     "id": 2055,
     "name": "Sounding Box #11",
