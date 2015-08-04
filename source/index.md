@@ -9,7 +9,6 @@ toc_footers:
 
 includes:
   - intro
-  - app_update
   - auth
   - content
   - my_library
