@@ -1623,7 +1623,7 @@ If user has already liked the project, this will unlike it.
 <p><code class="prettyprint">GET http://{server}/api/v2/users/lev</code></p>
 
 <h2 id="get-a-user&#39;s-likes">Get a user&rsquo;s Likes</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"http://{server}/api/v2/users/lev/likes"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"http://{server}/api/v2/users/sch/likes"</span>
 </code></pre>
 
 <blockquote>
@@ -1632,13 +1632,13 @@ If user has already liked the project, this will unlike it.
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1399</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Thermostat Hack"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"thermostat-hack"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://lb-community.s3.amazonaws.com/uploads/image/asset/5075/large_filled_servoarm.gif"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;span&gt;&lt;p&gt;&lt;b&gt;Control the temperature of your home remotely. &lt;/b&gt;This thermostat add-on uses the littleBits cloudBit and a servo module to change the temperature of your home from anywhere. Heading home from work and want to cool your apartment down? Use the slider app on&lt;a rel=\"nofollow\" target=\"_blank\" href=\"http://control.littlebitscloud.cc\"&gt; littleBits Cloud Control&lt;/a&gt; to wirelessly move the move the needle on the temperature scale. Want to make your thermostat smarter? Add a temperature sensor to get real time readings from your home.&lt;/p&gt;&lt;p&gt;&lt;i&gt;*Note: temperature sensor is &amp;nbsp;coming soon. Stay tuned!&lt;/i&gt;&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;b&gt;How it works:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;i&gt;Control&lt;/i&gt; - With this add-on, the littleBits servo is connected to adjuster arm on your thermostat. Use Cloud Control (on your phone or computer) to adjust the position of the servo arm, thus moving the little adjuster lever and changing the temperature.&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;i&gt;Automate&lt;/i&gt; - Use IFTTT to automatically adjust your thermostat in response to conditions that you set (i.e. time of day or forecasted weather conditions). &lt;a rel=\"nofollow\" target=\"_blank\" href=\"https://ifttt.com/\"&gt;IFTTT (If This Then That)&lt;/a&gt; is a service that lets you connect to different web apps through simple conditional statements. Use the &lt;a rel=\"nofollow\" target=\"_blank\" href=\"https://ifttt.com/date_and_time\"&gt;Date &amp;amp; Time channel&lt;/a&gt; to turn your thermostat down at 1pm and up at 6pm. The littleBits trigger allows you to adjust the percentage of output voltage sent to the servo, giving you more control over the temperature of your home.&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;i&gt;Monitor &lt;/i&gt;- The temperature sensor transmits data through the cloudBit to Cloud Control, which can be viewed under the “receive signal” tab. This way, you can always know temperature in your apartment/house.&lt;/p&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/span&gt;"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"comment_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"like_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1345</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Real-Time Weather Dashboard"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"real-time-weather-dashboard"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://lb-community.s3.amazonaws.com/uploads/image/asset/4742/large_filled_weatherdashboard.jpg"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;div&gt;\r\n\t\t\t\t&lt;div&gt;\r\n\t\t\t\t\t&lt;div&gt;\r\n\t\t\t\t\t\t&lt;p&gt;&lt;b&gt;Monitor current and forecasted weather data with littleBits and a little coding.&lt;/b&gt; These customizable\r\nand modular weather boxes display current temperature, the forecasted high and low temperatures for the\r\nday, and the forecasted conditions for the day (i.e. sunny, cloudy, precipitation).\r\n&lt;/p&gt;\r\n\t\t\t\t\t\t&lt;p&gt;Note: To complete this project, you will need to know how to work with APIs. The cloudBit’s API\r\ndocumentation can be found &lt;a rel=\"nofollow\" target=\"_blank\" href=\"http://developer.littlebitscloud.cc/api-http\"&gt;here&lt;/a&gt;. The Weather Underground's API documentation can be found &lt;a rel=\"nofollow\" target=\"_blank\" href=\"http://www.wunderground.com/weather/api/d/docs?d=index\"&gt;here&lt;/a&gt;.\r\n&lt;/p&gt;\r\n\t\t\t\t\t\t&lt;p&gt;&lt;b&gt;How they work:&lt;/b&gt;\r\n&lt;/p&gt;\r\n\t\t\t\t\t\t&lt;p&gt;We wrote a short program that gets information from Weather Underground and sends that data through the\r\nlittleBits cloud to a cloudBit. Every 30 minutes the program asks Weather Underground for the current\r\ntemperature and the forecasted high, low, and conditions for New York, NY. Then it converts this information\r\ninto a voltage* which is sent to each cloudBit, adjusting the angle of the servos (the servos must be set to\r\nturn mode for this to work). We've posted the code for our program here.\r\n&lt;/p&gt;\r\n\t\t\t\t\t\t&lt;p&gt;*The program does not specify the volts, rather it sends a value from 0 to 100 which tells the cloudBit what\r\npercentage of the total power (5v) to output.&amp;nbsp;&lt;/p&gt;\r\n\t\t\t\t\t&lt;/div&gt;\r\n\t\t\t\t&lt;/div&gt;\r\n\t\t\t&lt;/div&gt;"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"comment_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"like_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
       </span><span class="s2">"liked_by_user"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
       </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1750</span><span class="p">,</span><span class="w">
@@ -1646,141 +1646,13 @@ If user has already liked the project, this will unlike it.
         </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"littlebits"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"littleBits"</span><span class="w">
       </span><span class="p">}</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1848</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lego Rail Crossing Arm and Counter"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lego-rail-crossing-arm"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://lb-community.s3.amazonaws.com/uploads/image/asset/6454/large_filled_DMC_1474.jpg"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Keep the lego mini figures safe at rail crossings with this lego rail crossing. &amp;nbsp;It will also keep track of the number of trains which have passed over it as well.&lt;br&gt;&lt;br&gt;"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"comment_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"like_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"liked_by_user"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">36211</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://lb-community.s3.amazonaws.com/uploads/user/avatar/small_pinkModule.png"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"david-mccormack"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"david.mccormack"</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3197</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Toilet Seat Alarm"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"toilet-seat-alarm"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://lb-community.s3.amazonaws.com/uploads/image/asset/7827/large_filled_toilet.png"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I'm a horrible husband, and I think that littlebits can help me become a better spouse. Here's a project that does just that! This only works if you're thoughtful enough to turn off the bathroom light.&amp;nbsp;"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"comment_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"like_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"liked_by_user"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">45391</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://lb-community.s3.amazonaws.com/uploads/user/avatar/small_Tim_Cox.jpg"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"timcox"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"timcox"</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1553</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Spinning Replicator"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"spinning-replicator"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://lb-community.s3.amazonaws.com/uploads/image/asset/5554/large_filled_SpinningReplicator_0001_wide.jpg"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;The Spinning Replicator is a copy machine. It can scan an illustration and draw a copy of it without any kind of programming, just littleBits, LEGO elements and a marker. It moves like a gramophone, with two discs that rotates and a lever that travels from center to border. &lt;/p&gt;\r\n&lt;p&gt;\r\nThe lever has two sides, one has a light sensor and the other has a marker attached to a servo. When the light sensor is over a dark area, the marker goes down, when the sensor finds a bright area, the marker goes up.\r\nWhen the copy is complete, the roller switch is released, the motors stops and the cloudBit send me a phone notification. &lt;/p&gt;"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"comment_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"like_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"liked_by_user"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">28385</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://lb-community.s3.amazonaws.com/uploads/user/avatar/small_arthur_sacek.png"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-4858bb87-204f-4cd8-a917-1292005c9315"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"arthursacek"</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3383</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LittleBits &amp; Meccano"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"crawler_01-ec7d9274-4a40-4206-97ff-21103cbe4d2b"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://lb-community.s3.amazonaws.com/uploads/image/asset/8395/large_filled_Crawler_01.jpg"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;A marriage of LittleBits and Meccano. This crawler is my first LittleBits project. The crawler is a fairly basic Meccano model that’s powered by a LittleBits DC Motor module. Eventually, as other modules are acquired, steering and remote control will be added.&lt;/p&gt;&lt;p&gt;I have some press-on brass sleeves on order that will adapt Meccano size (4.1 mm) pinions and spurs to be used with the DC Motor module. Since the LittleBits DC Motor module isn't powerful or fast enough to be of much use powering Meccano models, the plan is to use the Hardware Development Kit (HDK) to build a module that will allow LittleBits modules to control the larger more powerful Meccano motors.&lt;br&gt;&lt;/p&gt;"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"comment_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"like_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"liked_by_user"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">55533</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://lb-community.s3.amazonaws.com/uploads/user/avatar/small_GWA120911.JPG"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"georgea"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GeorgeA"</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4474</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lip Sync Minion"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lip-sync-minion"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://lb-community.s3.amazonaws.com/uploads/image/asset/10982/large_filled_IMG_6886.JPG"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"I just came back from a trip around&amp;nbsp;Asia. While I was there, I&amp;nbsp;realized that the Minion toys from McDonalds there are different than the ones in New York. These Minions I found in Taiwan does more than just saying things and cursing,&amp;nbsp;&amp;nbsp;so awesome! &lt;br&gt;&lt;br&gt;This particular one I found has a small slider&amp;nbsp;in the back that opens and closes the&amp;nbsp;Minion's mouth!! Hacker mode on!! BzZZzzzZZZzz!!&lt;br&gt;&lt;br&gt;I have the following steps mapped out to my final&amp;nbsp;goal:&lt;br&gt;&lt;br&gt;&lt;b&gt;Step1: &lt;/b&gt;Can I control the mouth slider with a littlebits servo? &lt;b&gt;[checked!]&lt;/b&gt;&lt;br&gt;&lt;b&gt;Step2: &lt;/b&gt;Swap slider bit with Arduino bit&amp;nbsp;&lt;b&gt;[checked!]&lt;/b&gt;&lt;br&gt;&lt;b&gt;Step3: &lt;/b&gt;Write a [Processing sketch 1] to communicate with the Arduino bit&amp;nbsp;&lt;b&gt;[checked!]&lt;/b&gt;&lt;br&gt;&lt;b&gt;Step4: &lt;/b&gt;Write a separate [Processing sketch 2] to analyze sound&amp;nbsp;&lt;b&gt;[checked!]&lt;/b&gt;&lt;br&gt;&lt;b&gt;Step5:&lt;/b&gt; Merge the code together!&amp;nbsp;&lt;b&gt;[checked!]&lt;/b&gt;&lt;br&gt;&lt;br&gt;I modified the SimpleWrite sketch in Processing to achieve this. I would like to change a few things in the future like make the mouth movement more analoguish than No and Off right now. Anyway, I had great fun with this side project, have a great day!"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"comment_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"like_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"liked_by_user"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">34177</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://lb-community.s3.amazonaws.com/uploads/user/avatar/small_tumblr_nk0xjurrBP1qzyrh7o5_r1_540.jpg"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bfadt"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUSH"</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4853</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Automatic AC Thermostat"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"automatic-ac-thermostat"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://lb-community.s3.amazonaws.com/uploads/image/asset/12539/large_filled_17399379-5dd1-4c46-b044-70b711434283.png"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;div&gt;&lt;a rel=\"nofollow\" target=\"_blank\" href=\"http://youtu.be/FGvD5GybUBg\"&gt;http://youtu.be/FGvD5GybUBg&lt;/a&gt; &lt;br&gt;&lt;br&gt;My Second LittleBits project. My room gets pretty hot so I decided to have my fan automatically regulate the temperature. In this project I set my fan to turn on above 75 C and turn off below that.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;PARTS&lt;/div&gt;&lt;div&gt;1 usb power&lt;/div&gt;&lt;div&gt;1 temperature sensor&lt;/div&gt;&lt;div&gt;1 threshold&lt;/div&gt;&lt;div&gt;1 IR Transmitter&lt;/div&gt;&lt;div&gt;1 AC Switch&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;OPTIONAL&lt;/div&gt;&lt;div&gt;1 split&lt;/div&gt;&lt;div&gt;1 number&lt;/div&gt;&lt;div&gt;1 cloudBit module&lt;/div&gt;"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"comment_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"like_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"liked_by_user"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">75479</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://lb-community.s3.amazonaws.com/uploads/user/avatar/small_dbe2f193-a627-4a2d-98c8-be106f93a9f9.png"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21920aa8-fa6b-4ee2-9511-7452f72e26c1"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aaronify"</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4512</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Waste paper basketball cheering machine #BitOlympics"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"waste-paper-basketball-cheering-machine-bitolympics"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://lb-community.s3.amazonaws.com/uploads/image/asset/11099/large_filled_IMG_4436.JPG"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The only thing more boring than producing tons of waste paper is having to throw it away the old-fashioned way. Without a basketball hoop, this is.&lt;br&gt;Therefore, for everyone's joy, here is the &lt;b&gt;waste paper basketball cheering machine&lt;/b&gt;! Everytime your paper ball, Red Bull can, basketball or half eaten cup of ramen noodles passes the hoop, lights and the buzzer&amp;nbsp;turn on for some enjoyable audio-visual effects aka blinking.&lt;br&gt;"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"comment_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"like_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"liked_by_user"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">49620</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://lb-community.s3.amazonaws.com/uploads/user/avatar/small_Foto_Matthias_WOLF.png"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-2002d2ef-cd42-4141-bfcb-e0c587e58887"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"matthias.m.wolf"</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4887</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3G IoT Solar Rover"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3g-iot-solar-rover"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://lb-community.s3.amazonaws.com/uploads/image/asset/12804/large_filled_04e6eb6c-63d5-4c52-8b6a-338887b3f1dc.jpg"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;i&gt;The 3G IoT Solar Rover w&lt;/i&gt;&lt;i&gt;e have built for the&amp;nbsp;Holland Webweek Groningen,&amp;nbsp;with the&amp;nbsp;CloudBit, a solar panel,&amp;nbsp;a wifi/3G connection and Lego (chassis).&lt;/i&gt;"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"comment_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"like_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"liked_by_user"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">67437</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://lb-community.s3.amazonaws.com/uploads/user/avatar/small_Profiel-foto.jpg"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"andre-wolters"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"André Wolters"</span><span class="w">
-      </span><span class="p">}</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
   </span><span class="s2">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
     </span><span class="s2">"criteria"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/api/v2/users/lev/likes"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"endpoint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/api/v2/users/sch/likes"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
           </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"id"</span><span class="p">,</span><span class="w">
@@ -1788,7 +1660,7 @@ If user has already liked the project, this will unlike it.
         </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">
           </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"slug"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lev"</span><span class="w">
+          </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sch"</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">]</span><span class="w">
     </span><span class="p">},</span><span class="w">
