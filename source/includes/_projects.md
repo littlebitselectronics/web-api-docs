@@ -154,6 +154,7 @@ curl "http://{server}/api/v2/projects/2055"
       {
         "id": 2,
         "number": 1,
+        "title": "i am a jolly step title",
         "description": "<b>Make a sound box:</b><br>Design a resonating wooden chamber. We took design influence from...",
         "images": [
           {
