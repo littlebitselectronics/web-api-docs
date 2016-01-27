@@ -1189,7 +1189,7 @@ This will return more than one Library Module that represent the bits contained 
 </tbody></table>
 
 <h2 id="search-projects">Search projects</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"http://{server}/api/v2/projects/search?q=pig?per_page=1"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"http://{server}/api/v2/projects/search?kit=base-kit&amp;per_page=1"</span>
 </code></pre>
 
 <blockquote>
@@ -1220,6 +1220,11 @@ This will return more than one Library Module that represent the bits contained 
 <td>Sort projects by most recent or popular. Accepts either <code class="prettyprint">recent</code> or <code class="prettyprint">popular</code></td>
 </tr>
 <tr>
+<td>days_ago</td>
+<td>integer</td>
+<td>Return projects published some number of days ago</td>
+</tr>
+<tr>
 <td>tags</td>
 <td>string</td>
 <td>Return projects with a given tag</td>
@@ -1228,6 +1233,11 @@ This will return more than one Library Module that represent the bits contained 
 <td>type</td>
 <td>string</td>
 <td>Defaults to projects only. Use <code class="prettyprint">lesson</code> for lessons only.</td>
+</tr>
+<tr>
+<td>kit</td>
+<td>string</td>
+<td>Return projects that can be built with this kit. Use slug of a kit.</td>
 </tr>
 <tr>
 <td>variants</td>
