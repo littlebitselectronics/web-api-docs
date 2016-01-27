@@ -64,7 +64,7 @@ per_page | integer | Number of results per page. Default is 10
 ## Search projects
 
 ```shell
-curl "http://{server}/api/v2/projects/search?q=pig?per_page=1"
+curl "http://{server}/api/v2/projects/search?kit=base-kit&per_page=1"
 ```
 
 > The above command returns JSON structured like previously.
@@ -80,8 +80,10 @@ Parameter | Type  | Description
 --------- | ----- | -----------
 q | string | Search projects by keyword
 sort | string | Sort projects by most recent or popular. Accepts either `recent` or `popular`
+days_ago | integer | Return projects published some number of days ago
 tags | string | Return projects with a given tag
 type | string | Defaults to projects only. Use `lesson` for lessons only.
+kit | string | Return projects that can be built with this kit. Use slug of a kit.
 variants | integer | Return projects with these variant IDs and not any others. Should be a comma separated list.
 qty | integer | Return projects with this quantity of a corresponding variant ID. Must be a comma separated list of the same size as the list of variants.
 user | integer | Return projects of a given user ID
